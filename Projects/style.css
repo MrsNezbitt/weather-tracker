@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E0E0; /* Background color for the entire page */
+}
+
+h1 {
+    color: #007BFF;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+label, input, button {
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weatherInfo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Style for AM background */
+#background.am {
+    background-color: skyblue;
+}
+
+/* Style for PM background */
+#background.pm {
+    background-color: midnightblue;
+}
+
+/* Stars */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 3px #fff;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 0 20px #fff;
+}
+
+}
